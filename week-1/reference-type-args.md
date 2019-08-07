@@ -282,10 +282,13 @@ console.assert(object_2 !== by_copy_2);
 [on pytut](http://www.pythontutor.com/live.html#code=&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
-  function start_new_object(obj) {
+function start_new_object(obj) {
     // write this by building a new object from scratch
     // the paramenter should only be used on the right side of =
     // the new one should only be used on the left side of =
+    const obj_strified = JSON.stringify(obj);
+    const copy = JSON.parse(obj_strified);
+    return copy
   } 
   
   const object = {a: 1, b: 2};
@@ -298,7 +301,7 @@ console.assert(object_2 !== by_copy_2);
   const new_obj_2 = start_new_object(object_2);
   console.assert(object_2.x === new_obj_2.x);
   console.assert(object_2['z'] === new_obj_2['z']);
-  console.assert(object_2['it'] === new_obj_2.ti);
+  console.assert(object_2['it'] === new_obj_2['it']);
   console.assert(object_2 !== new_obj_2);
 }
 ```
