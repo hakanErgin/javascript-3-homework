@@ -195,9 +195,9 @@ not the best choice, it can be much more difficult to think about and debug.
 [on pytut](http://www.pythontutor.com/live.html#code=&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
-  function copy_array(arr) {
+function copy_array(arr) {
     // write this
-            var new_arr = [];
+        const new_arr = [];
         for (let i = 0; i < arr.length; i++) {
             new_arr.push(arr[i]);
         }
