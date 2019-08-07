@@ -254,22 +254,25 @@ function copy_array(arr) {
 [on pytut](http://www.pythontutor.com/live.html#code=&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
-  function copy_object(obj) {
+function copy_object(obj) {
     // write this
-  }
+    const obj_strified = JSON.stringify(obj);
+    const copy = JSON.parse(obj_strified);
+    return copy
+}
 
-  const object = {a: 1, b: 2};
-  const by_copy = copy_object(object);
-  console.assert(object.a === by_copy.a);
-  console.assert(object['b'] === by_copy['b']);
-  console.assert(object !== by_copy);
-  
-  const object_2 = {x: 3, z: null, it: "ti"};
-  const by_copy_2 = copy_object(object_2);
-  console.assert(object_2.x === by_copy_2.x);
-  console.assert(object_2['z'] === by_copy_2['z']);
-  console.assert(object_2['it'] === by_copy_2.ti);
-  console.assert(object_2 !== by_copy_2);
+const object = { a: 1, b: 2 };
+const by_copy = copy_object(object);
+console.assert(object.a === by_copy.a);
+console.assert(object['b'] === by_copy['b']);
+console.assert(object !== by_copy);
+
+const object_2 = { x: 3, z: null, it: "ti" };
+const by_copy_2 = copy_object(object_2);
+console.assert(object_2.x === by_copy_2.x);
+console.assert(object_2['z'] === by_copy_2['z']);
+console.assert(object_2['it'] === by_copy_2['it']); //had to change
+console.assert(object_2 !== by_copy_2);
 }
 ```
 
