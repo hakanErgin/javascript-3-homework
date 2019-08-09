@@ -3,8 +3,7 @@
 | :mortar_board: | your emoji | your comments | coach emoji | coach comments |
 | --- | --- | --- | --- | --- |
 | :egg: __[reference type arguments](./reference-type-args.md)__ |:green_heart: | [here](https://github.com/hakanErgin/javascript-3-homework/blob/reference-type-args/week-1/reference-type-args.md) | | |
-| :egg: __[closure: 0 & 1](../exercises-closure)__ | :green_heart:|[0-identifying-closure](https://github.com/hakanErgin/javascript-3-homework/blob/exercises-closure/exercises-closure/0-identifying-closure.html)
-[1-basic-closures](https://github.com/hakanErgin/javascript-3-homework/blob/exercises-closure/exercises-closure/1-basic-closures.html) | | |
+| :egg: __[closure: 0 & 1](../exercises-closure)__ | :green_heart:|[0-identifying-closure](https://github.com/hakanErgin/javascript-3-homework/blob/exercises-closure/exercises-closure/0-identifying-closure.html) [1-basic-closures](https://github.com/hakanErgin/javascript-3-homework/blob/exercises-closure/exercises-closure/1-basic-closures.html) | | |
 | :egg: __[event loop: 1 & 2](../exercises-event-loop)__ | | | | |
 | :egg: __[promise practice](./promise-practice.md)__ | | | | | 
 | :egg: __[three-layer handlers](./three-layer-handlers)__ | | | | |
