@@ -33,8 +33,8 @@ Please note that in this task resolve is called without arguments. We don’t re
 ### 3 Animated circle with promise
 
 Rewrite the showCircle function in the solution of the task Animated circle with callback so that it returns a promise instead of accepting a callback.
-[callback](https://plnkr.co/edit/RkVpygzQXYd0yAqwWElx?p=preview)
-[.then](https://plnkr.co/edit/gSQLOOs3AK3jbcCBKuna?p=preview)
+
+[callback](https://plnkr.co/edit/RkVpygzQXYd0yAqwWElx?p=preview) ---> [.then](https://plnkr.co/edit/gSQLOOs3AK3jbcCBKuna?p=preview)
 
 
 * [promise chaining](https://javascript.info/promise-chaining#tasks) 
