@@ -1,5 +1,6 @@
 complete these exercises from javascript.info and paste your solutions in to this file:
 * [promise basics](https://javascript.info/promise-basics#tasks)
+----
 
 ### 1 Re-resolve a promise?
 
@@ -36,8 +37,13 @@ Rewrite the showCircle function in the solution of the task Animated circle with
 
 [callback](https://plnkr.co/edit/RkVpygzQXYd0yAqwWElx?p=preview) ---> [.then](https://plnkr.co/edit/gSQLOOs3AK3jbcCBKuna?p=preview)
 
+----
 
 * [promise chaining](https://javascript.info/promise-chaining#tasks) 
+
+----
+
 * [promise api](https://javascript.info/promise-api)
 
+---
 and here's another [helpful resources](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
