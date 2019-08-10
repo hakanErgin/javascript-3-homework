@@ -1,8 +1,8 @@
 complete these exercises from javascript.info and paste your solutions in to this file:
 * [promise basics](https://javascript.info/promise-basics#tasks)
 
-#1
-
+### 1
+```js
 let promise = new Promise(function(resolve, reject) {
   resolve(1);
 
@@ -10,8 +10,8 @@ let promise = new Promise(function(resolve, reject) {
 });
 
 promise.then(alert);
+```
 The output is: 1.
-
 The second call to resolve is ignored, because only the first call of reject/resolve is taken into account. Further calls are ignored.
 
 
