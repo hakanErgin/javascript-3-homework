@@ -1,5 +1,8 @@
+
 complete these exercises from javascript.info and paste your solutions in to this file:
+
 ----
+
 * [promise basics](https://javascript.info/promise-basics#tasks)
 
 ### 1 Re-resolve a promise?
