@@ -53,22 +53,22 @@ add_button.addEventListener("click", add_handler);
 
 function subtract_handler() {
   // read and process user input
-  var first_str = document.getElementById('first-number').value;        
-  var second_str = document.getElementById('second-number').value;        
+  const first_str = document.getElementById('first-number').value;        
+  const second_str = document.getElementById('second-number').value;        
  
-  var first = Number(first_str);
-  var second = Number(second_str);
+  const first = Number(first_str);
+  const second = Number(second_str);
 
   // pass user input through core logic
-  var result = subtract(first, second); 
+  const result = subtract(first, second); 
   results.push({first, second, op: "subtract", result});
 
   // report result to user
-  var output_field = document.getElementById('result');
+  const output_field = document.getElementById('result');
   output_field.innerHTML = result; 
 }
 
-var subtract_button = document.getElementById("subtract");
+const subtract_button = document.getElementById("subtract");
 subtract_button.addEventListener("click", subtract_handler);
 
 
@@ -78,22 +78,22 @@ subtract_button.addEventListener("click", subtract_handler);
 
 function multiply_handler() {
   // read and process user input
-  var first_str = document.getElementById('first-number').value;        
-  var second_str = document.getElementById('second-number').value;        
+  const first_str = document.getElementById('first-number').value;        
+  const second_str = document.getElementById('second-number').value;        
  
-  var first = Number(first_str);
-  var second = Number(second_str);
+  const first = Number(first_str);
+  const second = Number(second_str);
 
   // pass user input through core logic
-  var result = multiply(first, second);  
+  const result = multiply(first, second);  
   results.push({first, second, op: "multiply", result});
 
   // report result to user
-  var output_field = document.getElementById('result');
+  const output_field = document.getElementById('result');
   output_field.innerHTML = result; 
 }
 
-var multiply_button = document.getElementById("multiply");
+const multiply_button = document.getElementById("multiply");
 multiply_button.addEventListener("click", multiply_handler);
 
 
@@ -102,22 +102,22 @@ multiply_button.addEventListener("click", multiply_handler);
 
 function divide_handler() {
   // read and process user input
-  var first_str = document.getElementById('first-number').value;        
-  var second_str = document.getElementById('second-number').value;        
+  const first_str = document.getElementById('first-number').value;        
+  const second_str = document.getElementById('second-number').value;        
  
-  var first = Number(first_str);
-  var second = Number(second_str);
+  const first = Number(first_str);
+  const second = Number(second_str);
 
   // pass user input through core logic
-  var result = divide(first, second); 
+  const result = divide(first, second); 
   results.push({first, second, op: "divide", result});
 
   // report result to user
-  var output_field = document.getElementById('result');
+  const output_field = document.getElementById('result');
   output_field.innerHTML = result;
 }
 
-var divide_button = document.getElementById("divide");
+const divide_button = document.getElementById("divide");
 divide_button.addEventListener("click", divide_handler);
 
 
@@ -135,5 +135,5 @@ function results_handler() {
   console.log(results);
 }
 
-var results_button = document.getElementById("results");
+const results_button = document.getElementById("results");
 results_button.addEventListener("click", results_handler);
