@@ -7,7 +7,7 @@
 | :egg: __[event loop: 1 & 2](../exercises-event-loop)__ |:green_heart: |[here](https://github.com/hakanErgin/javascript-3-homework/blob/exercises-event-loop/exercises-event-loop/index.html) | | |
 | :egg: __[promise practice](./promise-practice.md)__ | :wavy_dash:|[here](https://github.com/hakanErgin/javascript-3-homework/blob/promise-practice/week-1/promise-practice.md) | | | | 
 | :egg: __[three-layer handlers](./three-layer-handlers)__ |:wavy_dash: |[here](https://github.com/hakanErgin/javascript-3-homework/tree/three-layer-handlers/week-1/three-layer-handlers)  | | |
-| :hatching_chick: __[fetch data from APIs](./fetching-exercises)__ | | | | |
+| :hatching_chick: __[fetch data from APIs](./fetching-exercises)__ |:wavy_dash: |[here](https://github.com/hakanErgin/javascript-3-homework/tree/fetching-exercises/week-1/fetching-exercises) | | |
 | :hatching_chick: __[using BasicModel](./using-BasicModel.html)__ | | | | |
 
 ---
