@@ -1,6 +1,6 @@
 // --- data ---
 
-var results = [];
+const results = [];
 
 // --- functions ---
 
@@ -29,22 +29,22 @@ function divide(a, b) {
 
 function add_handler() {
   // read and process user input
-  var first_str = document.getElementById('first-number').value;        
-  var second_str = document.getElementById('second-number').value;        
+  const first_str = document.getElementById('first-number').value;        
+  const second_str = document.getElementById('second-number').value;        
  
-  var first = Number(first_str);
-  var second = Number(second_str);
+  const first = Number(first_str);
+  const second = Number(second_str);
 
   // pass user input through core logic
-  var result = add(first, second); 
+  const result = add(first, second); 
   results.push({first, second, op: "add", result});
 
   // report result to user
-  var output_field = document.getElementById('result');
+  const output_field = document.getElementById('result');
   output_field.innerHTML = result;
 }
 
-var add_button = document.getElementById("add");
+const add_button = document.getElementById("add");
 add_button.addEventListener("click", add_handler);
 
 
