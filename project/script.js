@@ -1,18 +1,16 @@
-const countries = function () {
-    
+const getCountriesWhenClicked = function getCountries() {
   fetch("https://restcountries.eu/rest/v2/all")
-    .then(function (data1) {
-      // console.log(data1)
-      return data1.json()
+    .then(function (rawData) {
+      return rawData.json()
     })
-    .then(function (data) {
-      console.log(data)
+    .then(function (dataJson) {
+      console.log(dataJson)
       const listElem = document.createElement("select"); // create list
-      document.querySelector("#div2").appendChild(listElem)
+      document.querySelector("#divDropdown").appendChild(listElem)
       listElem.id = "dropdownList";
 
-      //  map data and populate list
-      data.map(function (x) {
+      //  map dataJson and populate list
+      dataJson.map(function (x) {
         optionElem = document.createElement("option")
         optionElem.innerHTML = x.name //  fills html list
         // optionElem.value = x.name //  fills value
@@ -24,13 +22,13 @@ const countries = function () {
 
       //  select/change
       listElem.addEventListener("change", (event) => {
-        const selection = document.querySelector("#div3")
+        const selection = document.querySelector("#divResult")
         selection.textContent = event.target.value
         const selContent = selection.textContent
         console.log(selContent);
 
 
-        const selectedCountry = data.filter(country => country.name === selContent)
+        const selectedCountry = dataJson.filter(country => country.name === selContent)
         console.log(selectedCountry);
 
         //  creates content for selected
@@ -41,7 +39,8 @@ const countries = function () {
         createContent(selContent);
       })
     })
-  
+
 }
 
-document.getElementById("btn").addEventListener("click", countries);
+document.getElementById("btn").addEventListener("click", getCountriesWhenClicked);
+
