@@ -113,25 +113,25 @@
   let x = "";
 
   setTimeout(function assert_a(y) {
-      console.assert(y === null, "exercise 3", "a");
+      console.assert(y === "", "exercise 3", "a");
   }, 500, x);
 
   x = "second";
 
   setTimeout(function assert_b(y, z) {
-      console.assert(y+z === null, "exercise 3", "b");
+      console.assert(y+z === "second3", "exercise 3", "b");
   }, 500, x, 3);
 
   x = "third";
 
   setTimeout(function assert_c(y, z) {
-      console.assert(y+z === null, "exercise 3", "c");
+      console.assert(y+z === "thirdthird", "exercise 3", "c");
   }, 500, x, x);
 
   x = "fourth";
 
   setTimeout(function assert_d(y, z) {
-      console.assert(x+y+z === null, "exercise 3", "d");
+      console.assert(x+y+z === "finalfourthfourth", "exercise 3", "d");
   }, 500, x, x);
 
   x = "final";

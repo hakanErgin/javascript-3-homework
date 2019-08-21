@@ -17,6 +17,7 @@ function alphabetic_handler() {
           title: movies_data[key].title
         });
       }
+      console.log(movies_data);
       
       const sorted_by_title = all_movies.concat().sort((a, b) => a.title > b.title);
 
@@ -30,7 +31,8 @@ function alphabetic_handler() {
       const titles_ul = document.createElement("ul");
       for (let movie of sorted_by_title) {
         const next_li = document.createElement("li");
-        titles_ul.appendChild(movie.title);
+        next_li.innerText = movie.title;
+        titles_ul.appendChild(next_li);
       }
 
       movies_div.appendChild(titles_ul);

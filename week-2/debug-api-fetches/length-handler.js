@@ -45,4 +45,4 @@ function length_handler() {
 
 }
 var length_button = document.getElementById("length");
-length_button.addEventListener(click, lenth_handler);
+length_button.addEventListener("click", length_handler);
