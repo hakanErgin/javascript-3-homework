@@ -1,6 +1,6 @@
 function view_city_handler() {
   // read user input
-  const id_field = document.getElementById("city-to-view");
+  const id_field = document.getElementById("view-city");
   const string_id = id_field.value;
   const city_id = Number(string_id);
 

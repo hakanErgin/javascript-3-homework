@@ -39,5 +39,5 @@ function update_city_handler() {
 
 }
 
-const update_city_button = document.getElementById("update-city");
+const update_city_button = document.getElementById("update-city-id");
 update_city_button.addEventListener("click", update_city_handler);

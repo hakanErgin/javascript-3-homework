@@ -14,7 +14,8 @@ function add_city_handler() {
   const new_city = {
     name: city_name,
     country: city_country,
-    population: city_population
+    population: city_population,
+    id: next_id
   }
   cities[next_id] = new_city;
   next_id++;
@@ -47,5 +48,5 @@ function add_city_handler() {
 
 }
 
-const add_city_button = document.getElementById("delete-city");
+const add_city_button = document.getElementById("create-city");
 add_city_button.addEventListener("click", add_city_handler);

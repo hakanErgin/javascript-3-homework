@@ -2,6 +2,8 @@ function view_all_handler() {
   // read user input
   // no user input
 
+  console.log(cities);
+  
   // perform core logic
   const cities_entries = [];
   for (let key in cities) {
