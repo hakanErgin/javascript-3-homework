@@ -1,3 +1,5 @@
+_This repo is for studying purposes._
+
 # [JavaScript 3](https://github.com/be-hacking-hyf/javascript-3) Homework Repo
 
 First things first.  Don't Panic!
