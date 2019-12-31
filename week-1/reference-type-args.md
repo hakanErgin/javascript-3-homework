@@ -4,6 +4,13 @@ When reference types (ie. arrays, objects) are passed as arguments to a function
 
 These examples and exercises will help you understand _side effects_ and how to avoid them.
 
+
+# Reference Type Arguments
+
+When reference types (ie. arrays, objects) are passed as arguments to a function JavaScript simply passes a pointer to the thing in memory.  If you modify a data structure that was passed as an argument, the changes will remain in the global scope after the frame has closed.  This is a _side effect_.
+
+These examples and exercises will help you understand _side effects_ and how to avoid them.
+
 ### Index:
 * examples to study
     * [side effects with return value](#with-return-value)
@@ -195,6 +202,7 @@ function copy_array(arr) {
    const arr_strified = JSON.stringify(arr);
     const copy = JSON.parse(arr_strified);
     return copy
+
   }
 
   const array = ['a', 'b'];
@@ -227,6 +235,7 @@ function copy_array(arr) {
             new_arr.push(arr[i]);
         }
         return new_arr;
+
   }
 
   const array = ['a', 'b'];
@@ -268,6 +277,7 @@ console.assert(object_2.x === by_copy_2.x);
 console.assert(object_2['z'] === by_copy_2['z']);
 console.assert(object_2['it'] === by_copy_2['it']); //had to change
 console.assert(object_2 !== by_copy_2);
+
 }
 ```
 
@@ -284,6 +294,7 @@ function start_new_object(obj) {
     const obj_strified = JSON.stringify(obj);
     const copy = JSON.parse(obj_strified);
     return copy
+
   } 
   
   const object = {a: 1, b: 2};
@@ -307,4 +318,6 @@ function start_new_object(obj) {
 
 ___
 ___
-###
+
+### <a href="http://janke-learning.org" target="_blank"><img src="https://user-images.githubusercontent.com/18554853/50098409-22575780-021c-11e9-99e1-962787adaded.png" width="40" height="40"></img> Janke Learning</a>
+
