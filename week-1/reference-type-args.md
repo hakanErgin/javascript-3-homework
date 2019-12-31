@@ -1,6 +1,8 @@
-Understanding [reference vs. value](https://github.com/janke-learning/reference-vs-value) is critical to mastering asynchronous JavaScript. As you begin to use API's, promises and callbacks you will be updating application data by reference ("side effects").  API calls can't return values!
+# Reference Type Arguments
 
-> paste [this markdown of exercises](https://raw.githubusercontent.com/janke-learning/function-exercises/master/reference-type-arguments.md) into this file and complete the exercises 
+When reference types (ie. arrays, objects) are passed as arguments to a function JavaScript simply passes a pointer to the thing in memory.  If you modify a data structure that was passed as an argument, the changes will remain in the global scope after the frame has closed.  This is a _side effect_.
+
+These examples and exercises will help you understand _side effects_ and how to avoid them.
 
 
 # Reference Type Arguments
@@ -195,8 +197,12 @@ not the best choice, it can be much more difficult to think about and debug.
 [on pytut](http://www.pythontutor.com/live.html#code=&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
-  function copy_array(arr) {
+function copy_array(arr) {
     // write this
+   const arr_strified = JSON.stringify(arr);
+    const copy = JSON.parse(arr_strified);
+    return copy
+
   }
 
   const array = ['a', 'b'];
@@ -224,6 +230,12 @@ not the best choice, it can be much more difficult to think about and debug.
     // write this by building a new array from scratch
     // the paramenter should only be used on the right side of =
     // the new one should only be used on the left side of =
+    const new_arr = [];
+        for (let i = 0; i < arr.length; i++) {
+            new_arr.push(arr[i]);
+        }
+        return new_arr;
+
   }
 
   const array = ['a', 'b'];
@@ -246,22 +258,26 @@ not the best choice, it can be much more difficult to think about and debug.
 [on pytut](http://www.pythontutor.com/live.html#code=&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
-  function copy_object(obj) {
+function copy_object(obj) {
     // write this
-  }
+    const obj_strified = JSON.stringify(obj);
+    const copy = JSON.parse(obj_strified);
+    return copy
+}
 
-  const object = {a: 1, b: 2};
-  const by_copy = copy_object(object);
-  console.assert(object.a === by_copy.a);
-  console.assert(object['b'] === by_copy['b']);
-  console.assert(object !== by_copy);
-  
-  const object_2 = {x: 3, z: null, it: "ti"};
-  const by_copy_2 = copy_object(object_2);
-  console.assert(object_2.x === by_copy_2.x);
-  console.assert(object_2['z'] === by_copy_2['z']);
-  console.assert(object_2['it'] === by_copy_2.ti);
-  console.assert(object_2 !== by_copy_2);
+const object = { a: 1, b: 2 };
+const by_copy = copy_object(object);
+console.assert(object.a === by_copy.a);
+console.assert(object['b'] === by_copy['b']);
+console.assert(object !== by_copy);
+
+const object_2 = { x: 3, z: null, it: "ti" };
+const by_copy_2 = copy_object(object_2);
+console.assert(object_2.x === by_copy_2.x);
+console.assert(object_2['z'] === by_copy_2['z']);
+console.assert(object_2['it'] === by_copy_2['it']); //had to change
+console.assert(object_2 !== by_copy_2);
+
 }
 ```
 
@@ -271,10 +287,14 @@ not the best choice, it can be much more difficult to think about and debug.
 [on pytut](http://www.pythontutor.com/live.html#code=&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
-  function start_new_object(obj) {
+function start_new_object(obj) {
     // write this by building a new object from scratch
     // the paramenter should only be used on the right side of =
     // the new one should only be used on the left side of =
+    const obj_strified = JSON.stringify(obj);
+    const copy = JSON.parse(obj_strified);
+    return copy
+
   } 
   
   const object = {a: 1, b: 2};
@@ -287,7 +307,7 @@ not the best choice, it can be much more difficult to think about and debug.
   const new_obj_2 = start_new_object(object_2);
   console.assert(object_2.x === new_obj_2.x);
   console.assert(object_2['z'] === new_obj_2['z']);
-  console.assert(object_2['it'] === new_obj_2.ti);
+  console.assert(object_2['it'] === new_obj_2['it']);
   console.assert(object_2 !== new_obj_2);
 }
 ```
@@ -298,4 +318,6 @@ not the best choice, it can be much more difficult to think about and debug.
 
 ___
 ___
+
 ### <a href="http://janke-learning.org" target="_blank"><img src="https://user-images.githubusercontent.com/18554853/50098409-22575780-021c-11e9-99e1-962787adaded.png" width="40" height="40"></img> Janke Learning</a>
+
